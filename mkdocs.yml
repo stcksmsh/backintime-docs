@@ -1,0 +1,63 @@
+site_name: Back In Time documentation
+theme:
+  logo: 
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.bottom
+    - navigation.sidebar
+    - navigation.scroll
+    - navigation.footer
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - content.footnote.tooltips
+  language: en
+  palette:
+    - scheme: default
+      primary: black
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate 
+      primary: grey
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode    
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python: 
+          show_source: true
+          docstring_style: google
+  - mkdocs-nav-weight
+markdown_extensions:
+  - footnotes
+  - attr_list
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+nav:
+  - Home: index.md
+  - Quick Start: quick-start.md
+  - Main Window: main-window.md
+  - Settings: settings.md
+  - Snapshots Dialog: snapshots-dialog.md
+  - Log: log.md
+  - Additional: additional.md
