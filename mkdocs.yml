@@ -9,6 +9,7 @@ repo_url: https://github.com/bit-team/backintime
 theme:
   name: material
   logo: _images/logo48.png
+  favicon: _images/logo48.png
   features:
     - announce.dismiss
     - content.action.edit
