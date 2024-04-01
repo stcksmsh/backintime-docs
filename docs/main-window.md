@@ -7,10 +7,10 @@ Main Window
 Overview
 --------
 
-<!-- ![Back In Time main window](_images/light/main_window_sections.png#only-light)
-![Back In Time main window](_images/dark/main_window_sections.png#only-dark) -->
+![Back In Time main window](_images/light/main_window_sections.png#only-light)
+![Back In Time main window](_images/dark/main_window_sections.png#only-dark)
 
-![Back In Time main window](_images/light/main_window_sections.png)
+<!-- ![Back In Time main window](_images/light/main_window_sections.png) -->
 
 
 Main Toolbar
@@ -18,7 +18,7 @@ Main Toolbar
 
 ![take_snapshot](_images/document-save_btn.svg) Take Snapshot
 
-Take a new Snapshot in background. The main window can be closed during taking the snapshot. Normal behavior is to only compare files size and modification time. Alternatively, you can take a new Snapshot with `checksums` option enabled. This will calculate checksums for every file to decide if the file has changed. Taking a snapshot with checksums option takes a lot more time but it will make sure, the destination files won\'t be corrupt.
+Take a new Snapshot in background. The main window can be closed during taking the snapshot. Normal behavior is to only compare files size and modification time. Alternatively, you can take a new Snapshot with `checksums` option enabled. This will calculate checksums for every file to decide if the file has changed. Taking a snapshot with checksums option takes a lot more time but it will make sure, the destination files won't be corrupt.
 
 ![refresh_snapshot](_images/view-refresh_btn.svg) Refresh Snapshots List
 
@@ -77,23 +77,23 @@ Toggle hidden files (starting with a dot) to be shown in files view.
 
 Restore selected files or folders. This button has a sub-menu (hold down the button). Default action is `Restore`.
 
-    If this button is grayed out you need to select a snapshot in[Timeline](#timeline).
+If this button is grayed out you need to select a snapshot in[Timeline](#timeline).
 
-    ![restore](_images/edit-undo_btn.svg) Restore
+![restore](_images/edit-undo_btn.svg) Restore
 
-    Restore the selected files or folders to the original destination.
+Restore the selected files or folders to the original destination.
 
-    ![restore_to](_images/document-revert_btn.svg) Restore to\...
+![restore_to](_images/document-revert_btn.svg) Restore to...
 
-    Restore the selected files or folders to a new destination.
+Restore the selected files or folders to a new destination.
 
-    ![restore](_images/edit-undo_btn.svg) Restore \'/path\'
+![restore](_images/edit-undo_btn.svg) Restore '/path'
 
-    Restore the currently shown folder and all its content to the original destination.
+Restore the currently shown folder and all its content to the original destination.
 
-    ![restore_to](_images/document-revert_btn.svg) Restore \'/path\' to\...
+![restore_to](_images/document-revert_btn.svg) Restore 'path' to...
 
-    Restore the currently shown folder and all its content to a new destination.
+Restore the currently shown folder and all its content to a new destination.
 
 ![snapshots](_images/file-manager_btn.svg) Snapshots
 

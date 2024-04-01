@@ -1,5 +1,5 @@
 site_name: Back In Time documentation
-site_url: https://backintime-docs.readthedocs.io/
+site_url: https://backintime-docs.readthedocs.io/en/latest/
 site_author: BIT Team
 site_description: Back In Time is a simple backup tool for Linux inspired by "FlyBack".
 
@@ -11,17 +11,13 @@ theme:
   logo: _images/logo48.png
   favicon: _images/logo48.png
   features:
-    - announce.dismiss
-    - content.action.edit
-    - content.action.view
-    - content.code.annotate
-    - content.code.copy
-    - content.code.select
-    - content.footnote.tooltips
-    - content.tabs.link
-    - content.tooltips
     - header.autohide
+    - announce.dismiss
+    - navigation.instant
+    - navigation.instant.progress
+    - content.action.edit
     - navigation.expand
+    - navigation.top
     - navigation.footer
     - navigation.indexes
     - navigation.instant
@@ -39,13 +35,17 @@ theme:
     - toc.follow
     - toc.integrate
     - content.tabs.link
-    - content.code.annotation
+    - content.action.view
+    - content.code.annotate
     - content.code.copy
+    - content.code.select
     - content.footnote.tooltips
+    - content.tabs.link
+    - content.tooltips
   language: en
   palette:
     - scheme: default
-      primary: black
+      primary: blue grey
       accent: blue
       toggle:
         icon: material/weather-sunny
@@ -83,3 +83,7 @@ nav:
   - Snapshots Dialog: snapshots-dialog.md
   - Log: log.md
   - Additional: additional.md
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/bit-team/

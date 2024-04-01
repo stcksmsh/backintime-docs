@@ -17,29 +17,29 @@ Manage profiles > Options > Edit user-callback
 2. Profile name.
 3. Callback reason:
 
-| Value | Reason |
-| ----- | ------ |
-| **1** | A backup process is about to start. |
-| **2** | A backup process has ended. |
-| **3** | A new snapshot was taken. <br>The following arguments are snapshot ID and snapshot path. |
-| **4** | There was an error. For more information see [below](#errors). |
-| **5** | The (graphical) application has started. |
-| **6** | The (graphical) application has closed. |
-| **7** | Mounting a filesystem for the profile may be necessary. |
-| **8** | Unmounting a filesystem for the profile may be necessary. |
+| Value       | Reason                                                                                      |
+| ----------- | ------------------------------------------------------------------------------------------- |
+| **1** | A backup process is about to start.                                                         |
+| **2** | A backup process has ended.                                                                 |
+| **3** | A new snapshot was taken.`<br>`The following arguments are snapshot ID and snapshot path. |
+| **4** | There was an error. For more information see[below](#errors).                                  |
+| **5** | The (graphical) application has started.                                                    |
+| **6** | The (graphical) application has closed.                                                     |
+| **7** | Mounting a filesystem for the profile may be necessary.                                     |
+| **8** | Unmounting a filesystem for the profile may be necessary.                                   |
 
 ### Errors
 
 Possible error codes are:
 
-| Code | Error |
-| ---- | ----- |
-| **1** | Configuration is either missing or invalid (check configuration file) |
-| **2** | A backup process is already running[^1] |
-| **3** | Can't find snapshots folder[^2] |
-| **4** | A snapshot for "now" already exists <br> The fifth argument is the snapshot ID |
-| **5** | Error while taking a snapshot[^3] <br> The fifth argument contains more error information (string) |
-| **6** | New snapshot taken but with errors[^4] <br> The fifth argument is the snapshot ID |
+| Code        | Error                                                                                                  |
+| ----------- | ------------------------------------------------------------------------------------------------------ |
+| **1** | Configuration is either missing or invalid (check configuration file)                                  |
+| **2** | A backup process is already running[^1]                                                                |
+| **3** | Can't find snapshots folder[^2]                                                                        |
+| **4** | A snapshot for "now" already exists`<br>` The fifth argument is the snapshot ID                      |
+| **5** | Error while taking a snapshot[^3] `<br>` The fifth argument contains more error information (string) |
+| **6** | New snapshot taken but with errors[^4] `<br>` The fifth argument is the snapshot ID                  |
 
 ## Return value
 
@@ -53,7 +53,7 @@ The `UserCallbackPlugin` is a class defined [here](https://github.com/bit-team/b
 
 A simple script to log all calls to the user-callback script to a file in `$HOME/.local/state/backintime_callback_log`
 
-```
+```bash
 #!/bin/bash
 
 # Get current time
@@ -77,7 +77,10 @@ echo >> $HOME/.local/state/backintime_callback_log
 
 ```
 
-[^1]:Make sure that manual and automatic backups do not run at the same time.
-[^2]:For example, if your snapshots folder is on a removable drive, which is either not mounted, or is mounted at a different location
-[^3]:introduced Aug. 17. 2023.
-[^4]:introduced Aug. 17. 2023.
+[^1]: Make sure that manual and automatic backups do not run at the same time.
+    
+[^2]: For example, if your snapshots folder is on a removable drive, which is either not mounted, or is mounted at a different location
+    
+[^3]: introduced Aug. 17. 2023.
+    
+[^4]: introduced Aug. 17. 2023.
