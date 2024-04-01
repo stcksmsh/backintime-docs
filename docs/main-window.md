@@ -7,8 +7,11 @@ Main Window
 Overview
 --------
 
-![Back In Time main window](_images/light/main_window_sections.png#only-light)
-![Back In Time main window](_images/dark/main_window_sections.png#only-dark)
+<!-- ![Back In Time main window](_images/light/main_window_sections.png#only-light)
+![Back In Time main window](_images/dark/main_window_sections.png#only-dark) -->
+
+![Back In Time main window](_images/light/main_window_sections.png)
+
 
 Main Toolbar
 ------------
