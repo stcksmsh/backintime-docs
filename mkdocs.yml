@@ -1,11 +1,14 @@
-site_name: Back In Time documentation
+# Project information
+site_name: Back In Time user manual
 site_url: https://backintime-docs.readthedocs.io/en/latest/
 site_author: BIT Team
 site_description: Back In Time is a simple backup tool for Linux inspired by "FlyBack".
 
+# Repository information
 repo_name: Back In Time
 repo_url: https://github.com/bit-team/backintime
 
+# Configuration
 theme:
   name: material
   logo: _images/logo48.png
@@ -15,7 +18,6 @@ theme:
     - announce.dismiss
     - navigation.instant
     - navigation.instant.progress
-    - content.action.edit
     - navigation.expand
     - navigation.top
     - navigation.footer
@@ -25,16 +27,15 @@ theme:
     - navigation.instant.progress
     - navigation.prune
     - navigation.sections
-    - navigation.tabs
-    - navigation.tabs.sticky
-    - navigation.
-    - navigation.tracking
+    # - navigation.tabs
+    # - navigation.tabs.sticky
     - search.highlight
     - search.share
     - search.suggest
     - toc.follow
     - toc.integrate
     - content.tabs.link
+    - content.action.edit
     - content.action.view
     - content.code.annotate
     - content.code.copy
@@ -44,37 +45,56 @@ theme:
     - content.tooltips
   language: en
   palette:
-    - scheme: default
-      primary: blue grey
-      accent: blue
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to dark mode
-    - scheme: slate 
-      primary: grey
-      accent: blue
-      toggle:
-        icon: material/weather-night
-        name: Switch to light mode    
+  - media: "(prefers-color-scheme)"
+    toggle:
+      icon: material/link
+      name: Switch to light mode
+  - media: "(prefers-color-scheme: light)"
+    scheme: default
+    primary: blue grey
+    accent: blue
+    toggle:
+      icon: material/toggle-switch
+      name: Switch to dark mode
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    primary: grey
+    accent: blue
+    toggle:
+      icon: material/toggle-switch-off
+      name: Switch to system preference
+  font:
+    text: Roboto
+    code: Roboto Mono
+  # favicon: assets/favicon.png
+  # icon:
+  #   logo: logo
+
+# Plugins
 plugins:
   - search
+  - minify
   - mkdocstrings:
       default_handler: python
       handlers:
-        python: 
+        python:
+          paths: [src]
           show_source: true
           docstring_style: google
+
+# Additional configuration
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/bit-team/
+
+# Extensions
 markdown_extensions:
   - footnotes
   - attr_list
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences
-
+  - toc:
+      permalink: true  
+# Page tree
 nav:
   - Home: index.md
   - Quick Start: quick-start.md
@@ -83,7 +103,3 @@ nav:
   - Snapshots Dialog: snapshots-dialog.md
   - Log: log.md
   - Additional: additional.md
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/bit-team/

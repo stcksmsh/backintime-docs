@@ -1,7 +1,7 @@
 ---
 title: Welcome!
 ---
-Welcome to Back In Time's documentation!
+Welcome to the Back In Time user manual!
 ========================================
 
 Contents
